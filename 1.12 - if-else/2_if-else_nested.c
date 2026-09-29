@@ -14,12 +14,11 @@ int main() {
     //cek kondisi akun dan level
     printf("Apakah anda punya akun? (y/n) \n");
     scanf("%c", &akun);
-    printf("Berapa level akun anda? (0-250)\n");
-    scanf("%d", &level) ;
 
     printf("\n");
-
+    
     //Proses logika umum
+    
     /*
     Jika punya akun, maka lanjut ke cek level.
     Jika punya akun dan level 0-100, maka masuk jalur A
@@ -40,7 +39,21 @@ int main() {
     // versi ternary/singkat
     // bool status = (akun == 'y') ? true : false;
 
-    
+    if (status == 1){
+        printf("Berapa level akun anda? (0-250) \n");
+        scanf("%u", &level);
+
+        if (level <= 100) {
+        printf("Silakan ambil jalur A");
+        }
+
+        else {
+        printf("Silakan ambil jalur C");
+        }
+    }
+    else {
+    printf("Silakan masuk jalur D");
+    }
 
     return 0;
 }
